@@ -1,0 +1,95 @@
+{"frames": {
+
+"Hover_001":
+{
+	"frame": {"x":93,"y":394,"w":126,"h":67},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":0,"w":126,"h":67},
+	"sourceSize": {"w":155,"h":112}
+},
+"Hover_002":
+{
+	"frame": {"x":162,"y":394,"w":125,"h":76},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":27,"y":0,"w":125,"h":76},
+	"sourceSize": {"w":155,"h":112}
+},
+"Hover_003":
+{
+	"frame": {"x":1,"y":394,"w":126,"h":90},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":0,"w":126,"h":90},
+	"sourceSize": {"w":155,"h":112}
+},
+"Hover_004":
+{
+	"frame": {"x":1,"y":300,"w":122,"h":90},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":30,"y":0,"w":122,"h":90},
+	"sourceSize": {"w":155,"h":112}
+},
+"Hover_005":
+{
+	"frame": {"x":1,"y":97,"w":135,"h":111},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":17,"y":0,"w":135,"h":111},
+	"sourceSize": {"w":155,"h":112}
+},
+"Hover_006":
+{
+	"frame": {"x":138,"y":269,"w":123,"h":102},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":29,"y":0,"w":123,"h":102},
+	"sourceSize": {"w":155,"h":112}
+},
+"Hover_007":
+{
+	"frame": {"x":138,"y":135,"w":132,"h":110},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":0,"w":132,"h":110},
+	"sourceSize": {"w":155,"h":112}
+},
+"Hover_008":
+{
+	"frame": {"x":142,"y":1,"w":132,"h":105},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":20,"y":0,"w":132,"h":105},
+	"sourceSize": {"w":155,"h":112}
+},
+"Hover_009":
+{
+	"frame": {"x":1,"y":1,"w":139,"h":94},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":13,"y":0,"w":139,"h":94},
+	"sourceSize": {"w":155,"h":112}
+},
+"Hover_010":
+{
+	"frame": {"x":1,"y":210,"w":135,"h":88},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":0,"w":135,"h":88},
+	"sourceSize": {"w":155,"h":112}
+}},
+"animations": {
+	"Hover": ["Hover_001","Hover_002","Hover_003","Hover_004","Hover_005","Hover_006","Hover_007","Hover_008","Hover_009","Hover_010"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "hover.png",
+	"format": "RGBA8888",
+	"size": {"w":249,"h":521},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2adf823e7222ad9c986f0f8d12aa6750:3617d6db39d1dadfb6dee211a0b5fc04:51fd156dfbe3e360a67b9d8436943e15$"
+}
+}

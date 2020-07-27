@@ -32,6 +32,7 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
+    "gsap": "^3.4.2",
     "webpack": "^4.20.2",
     "webpack-dev-server": "^3.1.9"
   }
