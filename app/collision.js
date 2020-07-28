@@ -9,11 +9,10 @@ export function collision(a, b) {
       ab.y < bb.y + bb.height
     )
   
+
+  
     if (hasColi) {
-      return ab.x < bb.x ? 'right' : 'left';
-    }
-    if (hasColi) {
-        return ab.y < bb.y ? 'up' : 'down';
+        return true;
       }
     return false;
   }
