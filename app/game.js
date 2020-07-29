@@ -224,14 +224,14 @@ class Game {
 			this.jetEngine1.alpha = 1;
 			this.hoverJet1.alpha = 1;
 		});
-		this.selectJetFighter1.mouseout = () => {
+		this.selectJetFighter1.on('pointerout', () => {
 			let tl = new TimelineMax({ loop: true });
 
 			tl.to(this.selectJetFighter1.scale, 0.2, { x: 1, y: 1, ease: Linear.easeNone });
 			this.jetEngine1.alpha = 0;
 			this.hoverJet1.alpha = 0;
 		
-		};
+		});
 
 		this.selectJetFighter1.on('pointerdown', () => {
 			this.selectedject = 1;
@@ -269,19 +269,19 @@ class Game {
 
 
 		this.selectJetFighter2.on('pointerover', () => {
-			let tl = new TimelineMax({ loop: true });
+			let tl = new TimelineMax();
 
 			tl.to(this.selectJetFighter2.scale, 0.2, { x: 1.1, y: 1.1, ease: Linear.easeNone });
 			this.jetEngine2.alpha = 1;
 			this.hoverJet2.alpha = 1;
 		});
-		this.selectJetFighter2.mouseout = () => {
-			let tl = new TimelineMax({ loop: true });
+		this.selectJetFighter2.on('pointerout',  () => {
+			let tl = new TimelineMax();
 
 			tl.to(this.selectJetFighter2.scale, 0.2, { x: 1, y: 1, ease: Linear.easeNone });
 			this.jetEngine2.alpha = 0;
 			this.hoverJet2.alpha = 0;
-		};
+		});
 
 		this.selectJetFighter2.on('pointerdown', () => {
 			this.selectedject = 2;
@@ -798,15 +798,15 @@ class Game {
 		this.tryAgain.interactive = true;
 		this.tryAgain.buttonMode = true;
 		this.tryAgain.on('pointerover',() => {
-			let tl = new TimelineMax({ loop: true });
+			let tl = new TimelineMax();
 
 			tl.to(this.tryAgain.scale, 0.2, { x: 1.1, y: 1.1, ease: Linear.easeNone });
 		});
-		this.tryAgain.mouseout = () => {
-			let tl = new TimelineMax({ loop: true });
+		this.tryAgain.on('pointerout', () => {
+			let tl = new TimelineMax();
 
 			tl.to(this.tryAgain.scale, 0.2, { x: 1, y: 1, ease: Linear.easeNone });
-		};
+		});
 
 		this.tryAgain.on('pointerdown', () => {
 			this.shield();
@@ -831,15 +831,15 @@ class Game {
 		this.quit.buttonMode = true;
 
 		this.quit.on('pointerover',() => {
-			let tl = new TimelineMax({ loop: true });
+			let tl = new TimelineMax();
 
 			tl.to(this.quit.scale, 0.2, { x: 1.1, y: 1.1, ease: Linear.easeNone });
 		});
-		this.quit.mouseout = () => {
-			let tl = new TimelineMax({ loop: true });
+		this.quit.on('pointerout',() => {
+			let tl = new TimelineMax();
 
 			tl.to(this.quit.scale, 0.2, { x: 1, y: 1, ease: Linear.easeNone });
-		};
+		});
 
 		this.quit.on('pointerdown', () => {
 			this.initSelect();
