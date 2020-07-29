@@ -37,26 +37,10 @@ class Game {
 
 		this.app.loader
 			.add([
-				'/img/logo.png',
-				'/img/staticbg.jpg',
-				'/img/backBG.jpg',
 				'/img/hover.json',
-				'/img/mid2BG.png',
-				'/img/mid1BG.png',
-				'/img/frontBG.png',
 				'/img/jetFlame.json',
-				'/img/spaceship-1.png',
-				'/img/enemymissile.png',
-				'/img/missile1.png',
-				'/img/spaceship-2.png',
-				'/img/enemy1.png',
-				'/img/enemy2.png',
-				'/img/enemy3.png',
-				'/img/particle.png',
+				'/img/gameui.json',
 				'/img/explode.json',
-				'/img/gameover.png',
-				'/img/tryAgain.png',
-				'/img/quit.png',
 				'/sounds/exploded.mp3',
 				'/sounds/selectCharBg.mp3',
 				'/sounds/fire.mp3',
@@ -144,7 +128,7 @@ class Game {
 
 		this.gameIntances.intro.alpha = 1;
 
-		this.introLogo = new PIXI.Sprite.from(this.app.loader.resources['/img/logo.png'].texture);
+		this.introLogo = new PIXI.Sprite.from(PIXI.Texture.from('logo.png'));
 		this.introLogo.anchor.set(0.5);
 		this.introLogo.position.x = width / 2;
 		this.introLogo.position.y = height / 2;
@@ -179,9 +163,9 @@ class Game {
 		this.gameIntances.gameOver.alpha = 0;
 		this.gameIntances.select.alpha = 1;
 
-		this.staticbg = new PIXI.Sprite.from(this.app.loader.resources['/img/staticbg.jpg'].texture);
+		this.staticbg = new PIXI.Sprite.from(PIXI.Texture.from('staticbg.jpg'));
 
-		this.selectGameLogo = new PIXI.Sprite.from(this.app.loader.resources['/img/logo.png'].texture);
+		this.selectGameLogo = new PIXI.Sprite.from(PIXI.Texture.from('logo.png'));
 		this.selectGameLogo.anchor.set(0.5);
 		this.selectGameLogo.position.x = width / 2;
 		this.selectGameLogo.position.y = height / 2 - 100;
@@ -190,7 +174,7 @@ class Game {
 
 
 
-		this.selectJetFighter1 = new PIXI.Sprite.from(this.app.loader.resources['/img/spaceship-1.png'].texture);
+		this.selectJetFighter1 = new PIXI.Sprite.from(PIXI.Texture.from('spaceship-1.png'));
 
 		this.selectJetFighter1.anchor.set(0.5);
 		this.selectJetFighter1.position.x = width / 2 - 100;
@@ -239,7 +223,7 @@ class Game {
 			this.playSound('selected');
 		});
 
-		this.selectJetFighter2 = new PIXI.Sprite.from(this.app.loader.resources['/img/spaceship-2.png'].texture);
+		this.selectJetFighter2 = new PIXI.Sprite.from(PIXI.Texture.from('spaceship-2.png'));
 		this.selectJetFighter2.anchor.set(0.5);
 		this.selectJetFighter2.position.x = width / 2 + 100;
 		this.selectJetFighter2.position.y = height / 2 + 100;
@@ -312,7 +296,7 @@ class Game {
 
 		this.initJet(selectedJet);
 		this.gameIntances.select.removeChildren(0, this.gameIntances.select.children.length);
-		console.error(this.gameIntances.select.children.length);
+		// console.error(this.gameIntances.select.children.length);
 		this.app.ticker.add(this.gameLoop, this);
 	}
 	// game Ticker
@@ -330,10 +314,10 @@ class Game {
 	//iniliazed parallax background
 
 	initBg() {
-		this.backBG = this.createBgTiles(this.app.loader.resources['/img/backBG.jpg'].texture);
-		this.mid2BG = this.createBgTiles(this.app.loader.resources['/img/mid2BG.png'].texture);
-		this.mid1BG = this.createBgTiles(this.app.loader.resources['/img/mid1BG.png'].texture);
-		this.frontBG = this.createBgTiles(this.app.loader.resources['/img/frontBG.png'].texture);
+		this.backBG = this.createBgTiles(PIXI.Texture.from('backBG.jpg'));
+		this.mid2BG = this.createBgTiles(PIXI.Texture.from('mid2BG.png'));
+		this.mid1BG = this.createBgTiles(PIXI.Texture.from('mid1BG.png'));
+		this.frontBG = this.createBgTiles(PIXI.Texture.from('frontBG.png'));
 	}
 
 	createBgTiles(bgTexure) {
@@ -387,9 +371,9 @@ class Game {
 		this.jetEngine.play();
 
 		if (selectedJet === 1) {
-			this.jetFighter = new PIXI.Sprite.from(this.app.loader.resources['/img/spaceship-1.png'].texture);
+			this.jetFighter = new PIXI.Sprite.from(PIXI.Texture.from('spaceship-1.png'));
 		} else if (selectedJet === 2) {
-			this.jetFighter = new PIXI.Sprite.from(this.app.loader.resources['/img/spaceship-2.png'].texture);
+			this.jetFighter = new PIXI.Sprite.from(PIXI.Texture.from('spaceship-2.png'));
 		}
 		this.jetFighter.anchor.set(0.5);
 		this.jetFighter.position.x = 130;
@@ -450,13 +434,13 @@ class Game {
 
 	createMissile(multiShot) {
 		if (multiShot) {
-			let missile2 = new PIXI.Sprite.from(this.app.loader.resources['/img/missile1.png'].texture);
+			let missile2 = new PIXI.Sprite.from(PIXI.Texture.from('missile1.png'));
 			missile2.anchor.set(0.5);
 			missile2.x = this.jetFighter.x + 10;
 			missile2.y = this.jetFighter.y;
 			missile2.speed = missileSpeed;
 			this.gameIntances.game.addChild(missile2);
-			let missile = new PIXI.Sprite.from(this.app.loader.resources['/img/missile1.png'].texture);
+			let missile = new PIXI.Sprite.from(PIXI.Texture.from('missile1.png'));
 			missile.anchor.set(0.5);
 			missile.x = this.jetFighter.x + 10;
 			missile.y = this.jetFighter.y + 23;
@@ -464,7 +448,7 @@ class Game {
 			this.gameIntances.game.addChild(missile);
 			return [ missile, missile2 ];
 		} else {
-			let missile = new PIXI.Sprite.from(this.app.loader.resources['/img/missile1.png'].texture);
+			let missile = new PIXI.Sprite.from(PIXI.Texture.from('missile1.png'));
 			missile.anchor.set(0.5);
 			missile.x = this.jetFighter.x + 10;
 			missile.y = this.jetFighter.y + 23;
@@ -504,14 +488,14 @@ class Game {
 		let randomY = Math.floor(Math.random() * 510) + 100;
 		switch (randomEnemy) {
 			case 0:
-				enemy = new PIXI.Sprite.from(this.app.loader.resources['/img/enemy1.png'].texture);
+				enemy = new PIXI.Sprite.from(PIXI.Texture.from('enemy1.png'));
 				break;
 			case 1:
-				enemy = new PIXI.Sprite.from(this.app.loader.resources['/img/enemy2.png'].texture);
+				enemy = new PIXI.Sprite.from(PIXI.Texture.from('enemy2.png'));
 				break;
 
 			default:
-				enemy = new PIXI.Sprite.from(this.app.loader.resources['/img/enemy3.png'].texture);
+				enemy = new PIXI.Sprite.from(PIXI.Texture.from('enemy3.png'));
 		}
 
 		enemy.anchor.set(0.5);
@@ -582,7 +566,7 @@ class Game {
 	}
 	createEnemyMissile() {
 		for (let i = 0; i < this.enemies.length; i++) {
-			let enemyMissile = new PIXI.Sprite.from(this.app.loader.resources['/img/enemymissile.png'].texture);
+			let enemyMissile = new PIXI.Sprite.from(PIXI.Texture.from('enemymissile.png'));
 			enemyMissile.anchor.set(0.5);
 			enemyMissile.x = this.enemies[i].x + 10;
 			enemyMissile.y = this.enemies[i].y + 23;
@@ -729,19 +713,19 @@ class Game {
 				switch (this.power.info) {
 					case 'multiShot':
 						this.multiShot();
-						console.error('multiShot');
+						console.log('multiShot');
 						this.power.info = '';
 						break;
 
 					case 'shield':
 						this.shield();
-						console.error('shield');
+						console.log('shield');
 						this.power.info = '';
 						break;
 
 					case 'homingMissile':
 						this.homingMissile();
-						console.error('homingMissile');
+						console.log('homingMissile');
 						this.power.info = '';
 						break;
 					default:
@@ -776,7 +760,7 @@ class Game {
 		setTimeout(() => {
 			this.jetFighter.powerInfo = undefined;
 			this.jetFighter.hasPower = false;
-			console.error(this.jetFighter.powerInfo, this.jetFighter.hasPower);
+			// console.error(this.jetFighter.powerInfo, this.jetFighter.hasPower);
 		}, 5000);
 	}
 
@@ -786,12 +770,12 @@ class Game {
 		this.gameIntances.select.alpha = 0;
 		this.gameIntances.game.alpha = 0.5;
 
-		this.gameOverText = new PIXI.Sprite.from(this.app.loader.resources['/img/gameover.png'].texture);
+		this.gameOverText = new PIXI.Sprite.from(PIXI.Texture.from('gameover.png'));
 		this.gameOverText.anchor.set(0.5);
 		this.gameOverText.position.x = width / 2;
 		this.gameOverText.position.y = height / 2 - 100;
 
-		this.tryAgain = new PIXI.Sprite.from(this.app.loader.resources['/img/tryAgain.png'].texture);
+		this.tryAgain = new PIXI.Sprite.from(PIXI.Texture.from('tryAgain.png'));
 		this.tryAgain.anchor.set(0.5);
 		this.tryAgain.position.x = width / 2;
 		this.tryAgain.position.y = height / 2 + 70;
@@ -823,7 +807,7 @@ class Game {
 		});
 
 
-		this.quit = new PIXI.Sprite.from(this.app.loader.resources['/img/quit.png'].texture);
+		this.quit = new PIXI.Sprite.from(PIXI.Texture.from('quit.png'));
 		this.quit.anchor.set(0.5);
 		this.quit.position.x = width / 2;
 		this.quit.position.y = height / 2 + 160;
@@ -878,7 +862,7 @@ class Game {
 			this.particleContainer,
 		
 			// The collection of particle images to use
-			[this.app.loader.resources['/img/particle.png'].texture],
+			[PIXI.Texture.from('particle.png')],
 		
 			// Emitter configuration, edit this to change the look
 			// of the emitter

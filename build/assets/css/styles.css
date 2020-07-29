@@ -9,8 +9,10 @@ body {
 
 body {
     overflow: hidden;
-    background-color:  #742019;    ;
+    background: url(../img/bg.jpg)no-repeat top center;
+    background-color: #742019;
     width: 100%;
     position: relative;
+    background-size: cover;
 }
 

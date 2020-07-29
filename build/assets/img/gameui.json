@@ -1,0 +1,152 @@
+{"frames": {
+
+"backBG.jpg":
+{
+	"frame": {"x":1,"y":1,"w":960,"h":640},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":960,"h":640},
+	"sourceSize": {"w":960,"h":640}
+},
+"enemy1.png":
+{
+	"frame": {"x":1,"y":1482,"w":88,"h":53},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":53},
+	"sourceSize": {"w":88,"h":53}
+},
+"enemy2.png":
+{
+	"frame": {"x":1480,"y":1298,"w":102,"h":47},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":102,"h":47},
+	"sourceSize": {"w":102,"h":47}
+},
+"enemy3.png":
+{
+	"frame": {"x":1333,"y":1464,"w":91,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":71},
+	"sourceSize": {"w":91,"h":71}
+},
+"enemymissile.png":
+{
+	"frame": {"x":1426,"y":1525,"w":31,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":8},
+	"sourceSize": {"w":31,"h":8}
+},
+"frontBG.png":
+{
+	"frame": {"x":1,"y":1333,"w":960,"h":147},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":493,"w":960,"h":147},
+	"sourceSize": {"w":960,"h":640}
+},
+"gameover.png":
+{
+	"frame": {"x":963,"y":1298,"w":515,"h":164},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":515,"h":164},
+	"sourceSize": {"w":515,"h":164}
+},
+"logo.png":
+{
+	"frame": {"x":963,"y":963,"w":569,"h":333},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":569,"h":333},
+	"sourceSize": {"w":569,"h":333}
+},
+"mid1BG.png":
+{
+	"frame": {"x":1,"y":1072,"w":960,"h":259},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":348,"w":960,"h":259},
+	"sourceSize": {"w":960,"h":640}
+},
+"mid2BG.png":
+{
+	"frame": {"x":1,"y":643,"w":960,"h":427},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":213,"w":960,"h":427},
+	"sourceSize": {"w":960,"h":640}
+},
+"missile1.png":
+{
+	"frame": {"x":1480,"y":1402,"w":17,"h":13},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":13},
+	"sourceSize": {"w":17,"h":13}
+},
+"particle.png":
+{
+	"frame": {"x":91,"y":1482,"w":44,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":44},
+	"sourceSize": {"w":44,"h":44}
+},
+"quit.png":
+{
+	"frame": {"x":1534,"y":963,"w":368,"h":61},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":368,"h":61},
+	"sourceSize": {"w":368,"h":61}
+},
+"spaceship-1.png":
+{
+	"frame": {"x":1529,"y":1333,"w":125,"h":69},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":69},
+	"sourceSize": {"w":125,"h":69}
+},
+"spaceship-2.png":
+{
+	"frame": {"x":1426,"y":1464,"w":119,"h":59},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":119,"h":59},
+	"sourceSize": {"w":119,"h":59}
+},
+"staticbg.jpg":
+{
+	"frame": {"x":963,"y":1,"w":960,"h":640},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":960,"h":640},
+	"sourceSize": {"w":960,"h":640}
+},
+"tryAgain.png":
+{
+	"frame": {"x":963,"y":1464,"w":368,"h":61},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":368,"h":61},
+	"sourceSize": {"w":368,"h":61}
+}},
+"animations": {
+	"enemy": ["enemy1.png","enemy2.png","enemy3.png"],
+	"spaceship": ["spaceship-1.png","spaceship-2.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "gameui.png",
+	"format": "RGBA8888",
+	"size": {"w":1604,"h":1536},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:75dfbf2ae3d24380683dc608c12d248a:533fb48b4da02c9191d493429ce286e5:9b380cb3cb85b034a59364a079596f94$"
+}
+}
